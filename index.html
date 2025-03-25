@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Main content -->
+        <main class="main-content">
+            <section id="about" class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="cv-request">
+                        <button id="request-cv-btn" class="cv-button" title="Request CV">
+                            <i class="fas fa-file-alt"></i> Request CV
+                        </button>
+                    </div>
+                </div>
+                <div class="section-content">
+                    <p>Welcome to my academic portfolio! I am a Ph.D. candidate in the Institute of Mathematical Sciences, specializing in Bayesian statistics, security issues and Multi-Agent Reinforcement Learning.</p>
+                    
+                    <h3>Education</h3>
+                    <ul class="education-list">
+                        <li>
+                            <span class="degree">Ph.D. in Mathematics</span>
+                            <span>Instituto de Ciencias Matemáticas (ICMAT) - Universidad Autónoma de Madrid (UAM)</span>
+                            <span>2024 - Present</span>
+                        </li>
+                        <li>
+                            <span class="degree">M.S. in Logic, Computation and Artificial Intelligence</span>
+                            <span>Universidad de Sevilla (US)</span>
+                            <span>2023 - 2024</span>
+                        </li>
+                        <li>
+                            <span class="degree">B.S. in Mathematics</span>
+                            <span>Universidad de Sevilla (US)</span>
+                            <span>2019 - 2023</span>
+                        </li>
+                    </ul>
+
+                    <h3>Research Interests</h3>
+                    <ul class="interests-list">
+                        <li>Bayesian Data Analysis</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Federated Learning</li>
+                        <li>Multi-Agent Systems</li>
+                        <li>Spiking Neural Networks</li>
+                    </ul>
+
+                    <h3>Recent Updates</h3>
+                    <div class="recent-updates">
+                        <div class="updates-grid">
+                            <div class="update-card">
+                                <div class="update-image">
+                                    <img src="images/recent/AIHUBSummerSchool.jpg" alt="Conference Presentation">
+                                </div>
+                                <div class="update-content">
+                                    <h4>Conference Presentation</h4>
+                                    <p>Presented our research on Delayed Spiking Neural Networks at the AIHUB's conexion Summer School.</p>
+                                    <a href="conferences.html" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <div class="update-card">
+                                <div class="update-image">
+                                    <img src="images/personal_projects/transformerAttAllUNeed.png" alt="Transformers">
+                                </div>
+                                <div class="update-content">
+                                    <h4>Personal Project: Transformers</h4>
+                                    <p>Implementation from scratch of the module introduced in the well-known paper 
+                                        "Attention is All You Need", the transformers.</p>
+                                    <a href="projects.html" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <!--
+                            <div class="update-card">
+                                <div class="update-image">
+                                    <img src="images/publication.jpg" alt="New Publication">
+                                </div>
+                                <div class="update-content">
+                                    <h4>New Publication</h4>
+                                    <p>Our paper "Topological Methods in Machine Learning" has been accepted at the International Conference on Machine Learning.</p>
+                                    <a href="publications.html" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="update-card">
+                                <div class="update-image">
+                                    <img src="images/conference.jpg" alt="Conference Presentation">
+                                </div>
+                                <div class="update-content">
+                                    <h4>Conference Presentation</h4>
+                                    <p>Presented our research on "Topological Data Analysis in Practice" at the Annual Mathematics Conference.</p>
+                                    <a href="conferences.html" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="update-card">
+                                <div class="update-image">
+                                    <img src="images/project.jpg" alt="New Project">
+                                </div>
+                                <div class="update-content">
+                                    <h4>New Project</h4>
+                                    <p>Started a new research project on "Topological Methods for Biomedical Data Analysis" funded by the National Science Foundation.</p>
+                                    <a href="research_projects.html" class="update-link">Read More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            
+                            </div>
+                            -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2025 First Last. Last updated: March 2025</p>
+        </div>
+    </footer>
+
+    <!-- Modal para solicitar CV -->
+    <div id="cv-modal" class="cv-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 class="modal-title">Request CV</h3>
+            <form id="cv-request-form" class="cv-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="form-submit">Send Request</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/sidebar.js"></script>
+    <script src="js/cv-request.js"></script>
+</body>
+</html> 

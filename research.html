@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Academic Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="layout-container">
+        <!-- Sidebar with personal information -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-top">
+                    <div class="profile-container">
+                        <img src="profile-image.jpg" alt="Profile picture" class="profile-image">
+                        <h1>First Last</h1>
+                        <p class="title">Ph.D. Candidate in Applied Mathematics</p>
+                        <p class="affiliation">National University</p>
+                    </div>
+                    
+                    <nav class="sidebar-nav">
+                        <ul>
+                            <li><a href="index.html" class="nav-link"><i class="fas fa-user"></i> About Me</a></li>
+                            <li><a href="research.html" class="nav-link active"><i class="fas fa-flask"></i> Research</a></li>
+                            <li><a href="publications.html" class="nav-link"><i class="fas fa-scroll"></i> Publications</a></li>
+                            <li><a href="conferences.html" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Conferences</a></li>
+                            <li><a href="projects.html" class="nav-link"><i class="fas fa-code-branch"></i> Projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="sidebar-contact">
+                    <h3>Contact</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <a href="mailto:juan.perez@example.com" class="contact-icon" title="Copy email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/juanperez" target="_blank" class="contact-icon" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://linkedin.com/in/juanperez" target="_blank" class="contact-icon" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" class="contact-icon" title="ORCID">
+                                <i class="fab fa-orcid"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Juan_Perez" target="_blank" class="contact-icon" title="ResearchGate">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=example" target="_blank" class="contact-icon" title="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <section id="research" class="content-section">
+                <h2 class="section-title">Research</h2>
+                <div class="section-content">
+                    <div class="research-topic">
+                        <h3>Research Areas</h3>
+                        <p>My research focuses on developing topological methods for complex data analysis and machine learning. Specifically, I work on:</p>
+                        <ul>
+                            <li>Neural networks with topological features</li>
+                            <li>Biomedical data analysis using persistent homology</li>
+                            <li>Reinforcement learning algorithm optimization</li>
+                            <li>Topological data visualization</li>
+                        </ul>
+                    </div>
+
+                    <div class="research-framework">
+                        <h3>Theoretical Framework</h3>
+                        <p>My work is based on persistent homology theory and algebraic topology, applying these concepts to practical problems in machine learning. For example:</p>
+                        <div class="math-example">
+                            \[ H_k(X) = \ker(\partial_k) / \text{im}(\partial_{k+1}) \]
+                        </div>
+                    </div>
+
+                    <div class="current-projects">
+                        <h3>Current Projects</h3>
+                        <ul>
+                            <li>Development of a neural network architecture incorporating topological features</li>
+                            <li>Biomedical data analysis using persistent homology techniques</li>
+                            <li>Optimization of reinforcement learning algorithms with topological features</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2023 First Last. Last updated: October 2023</p>
+        </div>
+    </footer>
+
+    <script>
+        // Email copy to clipboard functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailLinks = document.querySelectorAll('.contact-icon[data-type="email"]');
+            
+            emailLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const email = this.getAttribute('data-value');
+                    navigator.clipboard.writeText(email)
+                        .then(() => {
+                            // Create and show tooltip
+                            const tooltip = document.createElement('div');
+                            tooltip.className = 'tooltip';
+                            tooltip.textContent = 'Email copied!';
+                            document.body.appendChild(tooltip);
+                            
+                            // Position tooltip near the icon
+                            const rect = this.getBoundingClientRect();
+                            tooltip.style.top = `${rect.top - 40}px`;
+                            tooltip.style.left = `${rect.left}px`;
+                            
+                            // Remove tooltip after a delay
+                            setTimeout(() => {
+                                tooltip.classList.add('fade-out');
+                                setTimeout(() => {
+                                    document.body.removeChild(tooltip);
+                                }, 500);
+                            }, 2000);
+                        })
+                        .catch(err => {
+                            console.error('Failed to copy email: ', err);
+                        });
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
