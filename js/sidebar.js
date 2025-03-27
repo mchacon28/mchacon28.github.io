@@ -20,8 +20,8 @@ const sidebarConfig = {
             { href: "https://github.com/mchacon28", icon: "fab fa-github", title: "GitHub" },
             { href: "https://www.linkedin.com/in/mario-chacon-falcon518831318/", icon: "fab fa-linkedin", title: "LinkedIn" },
             { href: "https://orcid.org/0009-0004-5938-0551", icon: "fab fa-orcid", title: "ORCID" },
-            { href: "https://www.researchgate.net/profile/Mario-Chacon-Falcon", icon: "fab fa-researchgate", title: "ResearchGate" },
-            { href: "https://scholar.google.com/citations?user=example", icon: "fas fa-graduation-cap", title: "Google Scholar" }
+            //{ href: "https://www.researchgate.net/profile/Mario-Chacon-Falcon", icon: "fab fa-researchgate", title: "ResearchGate" },
+            { href: "https://scholar.google.es/citations?user=s39KvDoAAAAJ&hl=es", icon: "fas fa-graduation-cap", title: "Google Scholar" }
         ]
     }
 };

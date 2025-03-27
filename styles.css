@@ -722,6 +722,38 @@ footer {
     color: #888;
 }
 
+/* Footer styles with funding info */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-funding {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+.footer-logo {
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+    .footer-funding {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-logo {
+        height: 40px;
+        margin-top: 0.5rem;
+    }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     :root {
@@ -1270,4 +1302,40 @@ footer {
 
 .close-image-modal:hover {
     color: var(--accent-color);
+}
+
+/* Funding info styles */
+.funding-info {
+    display: flex;
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.5);
+    border-radius: var(--border-radius);
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border-left: 3px solid var(--primary-color);
+}
+
+.funding-info p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    flex: 1;
+}
+
+.funding-logo {
+    height: 60px;
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .funding-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .funding-logo {
+        margin-left: 0;
+        margin-top: 0.8rem;
+        height: 50px;
+    }
 } 
