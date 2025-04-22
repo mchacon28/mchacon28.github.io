@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNN Visual</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: transparent;
+            color: var(--primary-color);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        header::after {
+            content: none;
+        }
+
+        .sidebar {
+            background-color: #343a40;
+            color: white;
+            padding: 15px;
+            height: 100vh;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            color: var(--accent-color);
+        }
+
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+            color: var(--light-color);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .video-item {
+            margin-bottom: 20px;
+        }
+
+        .video-item h2 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .video-item p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .output-videos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .output-videos .video-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .output-videos .video-item h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; margin-left: 220px;">BAM-SLDK Delay Visualization</h1>
+    </header>
+    <p style="text-align: center; margin: 20px; margin-left: 220px;">
+        In this website we present examples of BAM-SLDK temporal delayed output visualizations for the DVS128 Gestures and DVS128 GesturesGC datasets. The videos are organized by dataset and label. Click on the dataset name to view the available labels, and then click on a label to view the corresponding videos.
+        The videos are organized by channel, with each channel representing a different temporal delayed output learned by the network's first layer. The input video is also displayed for reference.
+    </p>
+    <p style="text-align: center; margin: 20px; margin-left: 220px;">Details about the BAM-SLDK model can be found in the following paper: <span style="color: red;">Available uppon acceptance of the paper</span>.</p>
+    <p style="text-align: center; margin: 20px; margin-left: 220px;">Code implementations can be found in the following repository: <span style="color: red;">Available uppon acceptance of the paper</span>.</p>
+    <div class="sidebar" id="sidebar" style="position: fixed; left: 0; top: 0; bottom: 0; width: 200px; background-color: #f4f4f4; padding: 10px;">
+        <h2>Datasets</h2>
+        <ul>
+            <li>
+                <a href="#" onclick="toggleSubmenu('dvsgestures128Submenu')">DVS128 Gestures</a>
+                <ul id="dvsgestures128Submenu" style="display: none; padding-left: 15px;">
+                    <li><a href="#" onclick="showAirDrumVideos()">Air Drum</a></li>
+                    <li><a href="#" onclick="showRightHandWaveVideos()">Right Hand Wave</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="toggleSubmenu('dvsgestures128gcSubmenu')">DVS128 GesturesGC</a>
+                <ul id="dvsgestures128gcSubmenu" style="display: none; padding-left: 15px;">
+                    <li><a href="#" onclick="showRHW_RHCC_ADVideos()">RHW_RHCC_AD</a></li>
+                    <li><a href="#" onclick="showAD_RHW_RHCCVideos()">AD_RHW_RHCC</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="container" style="margin-left: 220px;">
+        <button id="menuToggle" style="position: absolute; top: 10px; left: 10px; background-color: #007BFF; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 5px;">☰</button>
+        <main class="content">
+            <div class="video-item">
+                <h2>Input</h2>
+                <p>Dataset: DVS128 Gestures</p>
+                <p>Label: Air Drum</p>
+                <video id="videoPlayer" width="320" height="240" controls>
+                    <source src="videos/DVSGesture128/AirDrum/DVSGest128AirDrum.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="output-videos" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div class="video-item">
+                    <h3>Channel 0</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel0.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 1</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 2</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 3</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel3.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 4</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 5</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel5.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 6</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel6.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 7</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel7.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 8</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel8.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <h3>Channel 9</h3>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/Outputs/channel9.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+        const sidebar = document.getElementById('sidebar');
+        const menuToggle = document.getElementById('menuToggle');
+
+        menuToggle.addEventListener('click', () => {
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'block';
+            } else {
+                sidebar.style.display = 'none';
+            }
+        });
+
+        function toggleSubmenu(submenuId) {
+            const submenu = document.getElementById(submenuId);
+            if (submenu.style.display === 'none' || submenu.style.display === '') {
+                submenu.style.display = 'block';
+            } else {
+                submenu.style.display = 'none';
+            }
+        }
+
+        function showAirDrumVideos() {
+            const container = document.querySelector('.content');
+            container.innerHTML = `
+                <div class="video-item">
+                    <h2>Input</h2>
+                    <p>Dataset: DVS128 Gestures</p>
+                    <p>Label: Air Drum</p>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/AirDrum/DVSGest128AirDrum.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="output-videos" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    ${[...Array(10).keys()].map(i => `
+                        <div class="video-item">
+                            <h3>Channel ${i}</h3>
+                            <video width="320" height="240" controls>
+                                <source src="videos/DVSGesture128/AirDrum/Outputs/channel${i}.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showRightHandWaveVideos() {
+            const container = document.querySelector('.content');
+            container.innerHTML = `
+                <div class="video-item">
+                    <h2>Input</h2>
+                    <p>Dataset: DVS128 Gestures</p>
+                    <p>Label: Right Hand Wave</p>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128/rightHandWave/DVSGest128RHW.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="output-videos" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    ${[...Array(10).keys()].map(i => `
+                        <div class="video-item">
+                            <h3>Channel ${i}</h3>
+                            <video width="320" height="240" controls>
+                                <source src="videos/DVSGesture128/rightHandWave/Outputs/channel${i}.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showRHW_RHCC_ADVideos() {
+            const container = document.querySelector('.content');
+            container.innerHTML = `
+                <div class="video-item">
+                    <h2>Input</h2>
+                    <p>Dataset: DVS128 GesturesGC</p>
+                    <p>Label: Sequence of Right Hand Wave, Right Hand Counter Clockwise and Air Drum (RHW_RHCC_AD) gestures</p>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128GC/RHW_RHCC_AD/DVSGest128GCRHWRHCCAD.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="output-videos" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    ${[...Array(10).keys()].map(i => `
+                        <div class="video-item">
+                            <h3>Channel ${i}</h3>
+                            <video width="320" height="240" controls>
+                                <source src="videos/DVSGesture128GC/RHW_RHCC_AD/Outputs/channel${i}.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function showAD_RHW_RHCCVideos() {
+            const container = document.querySelector('.content');
+            container.innerHTML = `
+                <div class="video-item">
+                    <h2>Input</h2>
+                    <p>Dataset: DVS128 GesturesGC</p>
+                    <p>Label: Sequence of Air Drum, Right Hand Wave and Right Hand Counter Clockwise (AD_RHW_RHCC) gestures</p>
+                    <video width="320" height="240" controls>
+                        <source src="videos/DVSGesture128GC/AD_RHW_RHCC/DVSGest128GCAD_RHW_RHCC.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="output-videos" style="display: flex; flex-wrap: wrap; gap: 10px;">
+                    ${[...Array(10).keys()].map(i => `
+                        <div class="video-item">
+                            <h3>Channel ${i}</h3>
+                            <video width="320" height="240" controls>
+                                <source src="videos/DVSGesture128GC/AD_RHW_RHCC/Outputs/channel${i}.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
