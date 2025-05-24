@@ -8,7 +8,7 @@ const sidebarConfig = {
     },
     navigation: [
         { href: "index.html", icon: "fas fa-user", text: "About Me" },
-        //{ href: "publications.html", icon: "fas fa-scroll", text: "Publications" },
+        { href: "publications.html", icon: "fas fa-scroll", text: "Publications" },
         { href: "conferences.html", icon: "fas fa-chalkboard-teacher", text: "Conferences" },
         //{ href: "research_projects.html", icon: "fas fa-flask", text: "Research Projects" },
         { href: "projects.html", icon: "fas fa-code-branch", text: "Personal Projects" },
