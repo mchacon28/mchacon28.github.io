@@ -4,7 +4,7 @@ const sidebarConfig = {
         name: "Mario Chacón-Falcón",
         title: "Ph.D. Candidate in Artificial Intelligence",
         affiliation: "Institute of Mathematical Sciences (ICMAT-CSIC)",
-        image: "images/profile3.JPG"
+        image: "images/foto_carnet2025_2.jpg"
     },
     navigation: [
         { href: "index.html", icon: "fas fa-user", text: "About Me" },
