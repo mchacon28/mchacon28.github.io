@@ -126,6 +126,8 @@ p {
     width: 135px;
     height: 135px;
     border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
     margin-bottom: 0.6rem;
     border: 3px solid var(--primary-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -349,56 +351,191 @@ p {
 }
 
 /* Publications, conferences, projects, and teaching styles */
-.publication-item, .conference-item, .project-item, .teaching-item {
+.publication-item, .conference-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.publication-item:hover, .conference-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+    border-color: #cbd5e1;
+}
+
+.project-item, .teaching-item {
     margin-bottom: 2rem;
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.publication-item:last-child, .conference-item:last-child, 
-.project-item:last-child, .teaching-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
+.pub-header, .conf-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.pub-title, .conf-title, .project-title, .teaching-title {
-    font-size: 1.3rem;
+.pub-badge, .conf-badge {
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.pub-badge {
+    background: rgba(10, 77, 104, 0.08);
     color: var(--primary-color);
 }
 
-.pub-authors, .pub-journal, .conf-venue, .conf-location, 
-.teaching-period {
-    margin-bottom: 0.8rem;
+.conf-badge.invited {
+    background: rgba(8, 131, 149, 0.12);
+    color: #088395;
 }
 
-.pub-links, .conf-links, .project-links, .teaching-links {
-    margin: 1rem 0;
+.conf-badge.oral {
+    background: rgba(2, 132, 199, 0.12);
+    color: #0284c7;
+}
+
+.conf-badge.poster {
+    background: rgba(217, 119, 6, 0.12);
+    color: #b45309;
+}
+
+.conf-badge.workshop {
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+}
+
+.conf-badge.organizer {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.pub-year, .conf-year {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.timeline-year {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 2.2rem 0 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.timeline-year::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.timeline-year:first-of-type {
+    margin-top: 0.5rem;
+}
+
+.pub-title, .conf-title {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+}
+
+.pub-authors {
+    color: #334155;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+}
+
+.pub-journal {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 0.92rem;
+    margin-bottom: 0.6rem;
+}
+
+.conf-venue {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 0.92rem;
+    margin-bottom: 0.25rem;
+}
+
+.conf-location {
+    color: #64748b;
+    font-size: 0.88rem;
+    margin-bottom: 0.75rem;
+}
+
+.conf-location i {
+    color: var(--accent-color);
+    margin-right: 0.25rem;
+}
+
+.pub-links, .conf-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.9rem 0;
 }
 
 .pub-link, .conf-link, .project-link, .teaching-link {
-    display: inline-block;
-    margin-right: 15px;
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.4rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border: 1px solid #cbd5e1;
+    padding: 0.35rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
 }
 
 .pub-link:hover, .conf-link:hover, .project-link:hover, .teaching-link:hover {
-    background-color: var(--accent-color);
-    color: white;
-    transform: translateY(-2px);
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(10, 77, 104, 0.2);
 }
 
 .pub-link i, .conf-link i, .project-link i, .teaching-link i {
-    margin-right: 5px;
+    margin-right: 6px;
+    font-size: 0.85rem;
 }
 
-.pub-abstract, .conf-abstract, .project-description, .teaching-description {
-    font-style: italic;
-    opacity: 0.9;
+.pub-abstract, .conf-abstract {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-top: 0.85rem;
+    background: #f8fafc;
+    padding: 0.9rem 1.1rem;
+    border-radius: 6px;
+    border-left: 3px solid #cbd5e1;
+    font-style: normal;
+}
+
+.project-description, .teaching-description {
+    font-style: normal;
+    color: #475569;
 }
 
 /* Projects styling */
@@ -670,7 +807,7 @@ p {
     transition: all 0.3s ease;
 }
 
-.publication-item:hover, .conference-item:hover, .project-item:hover, .teaching-item:hover {
+.project-item:hover, .teaching-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -846,6 +983,8 @@ footer {
     .profile-image {
         width: 80px;
         height: 80px;
+        object-fit: cover;
+        object-position: center;
         margin-right: 1rem;
         margin-bottom: 0;
     }
@@ -917,10 +1056,59 @@ footer {
     padding: 1.5rem;
 }
 
+.update-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    gap: 0.5rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+    letter-spacing: 0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.badge-paper {
+    background: rgba(10, 77, 104, 0.1);
+    color: var(--primary-color);
+}
+
+.badge-talk {
+    background: rgba(8, 131, 149, 0.12);
+    color: #088395;
+}
+
+.badge-group {
+    background: rgba(16, 185, 129, 0.12);
+    color: #047857;
+}
+
+.update-date {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.card-inline-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
 .update-content h4 {
     color: var(--primary-color);
-    font-size: 1.2rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.35;
 }
 
 .update-content p {

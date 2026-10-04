@@ -4,14 +4,14 @@ const sidebarConfig = {
         name: "Mario Chacón-Falcón",
         title: "Ph.D. Candidate in Artificial Intelligence",
         affiliation: "Institute of Mathematical Sciences (ICMAT-CSIC)",
-        image: "images/foto_carnet2025_2.jpg"
+        image: "images/foto_carnet2025_cuadrada.jpg"
     },
     navigation: [
         { href: "index.html", icon: "fas fa-user", text: "About Me" },
         { href: "publications.html", icon: "fas fa-scroll", text: "Publications" },
         { href: "conferences.html", icon: "fas fa-chalkboard-teacher", text: "Talks" },
         //{ href: "research_projects.html", icon: "fas fa-flask", text: "Research Projects" },
-        { href: "projects.html", icon: "fas fa-code-branch", text: "Personal Projects" },
+        //{ href: "projects.html", icon: "fas fa-code-branch", text: "Personal Projects" },
         //{ href: "awards.html", icon: "fas fa-trophy", text: "Awards & Honors" }
     ],
     contact: {
