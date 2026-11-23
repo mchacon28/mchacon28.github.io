@@ -1,163 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Mario Chacón-Falcón</title>
+    <meta name="description"
+        content="Mario Chacón-Falcón — PhD candidate at ICMAT-CSIC working on adaptive and multi-agent reinforcement learning from a Bayesian decision-theoretic perspective.">
+    <meta property="og:title" content="Mario Chacón-Falcón">
+    <meta property="og:description"
+        content="Adaptive & multi-agent reinforcement learning, Bayesian decision making. PhD candidate at ICMAT-CSIC.">
+    <meta property="og:image" content="images/profile-2026.jpg">
+    <meta property="og:type" content="profile">
+    <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t } catch (e) { }</script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mario Chacón-Falcón",
+        "jobTitle": "PhD Candidate",
+        "affiliation": { "@type": "Organization", "name": "Instituto de Ciencias Matemáticas (ICMAT-CSIC)" },
+        "url": "https://mchacon28.github.io/",
+        "image": "https://mchacon28.github.io/images/profile-2026.jpg",
+        "sameAs": [
+            "https://scholar.google.es/citations?user=s39KvDoAAAAJ",
+            "https://github.com/mchacon28",
+            "https://orcid.org/0009-0004-5938-0551",
+            "https://www.linkedin.com/in/mario-chacon-falcon518831318/"
+        ],
+        "knowsAbout": ["Reinforcement Learning", "Multi-Agent Reinforcement Learning", "Bayesian Statistics", "Adversarial Risk Analysis", "Decision Theory"]
+    }
+    </script>
 </head>
-<body>
-    <div class="layout-container">
-        <!-- Main content -->
-        <main class="main-content">
-            <section id="about" class="content-section">
-                <div class="section-header">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="cv-request">
-                        <button id="request-cv-btn" class="cv-button" title="Request CV">
-                            <i class="fas fa-file-alt"></i> Request CV
-                        </button>
-                    </div>
-                </div>
-                <div class="section-content">
-                    <p>Welcome to my academic portfolio! I am a Ph.D. candidate at the Institute of Mathematical Sciences, specializing in Bayesian statistics, security issues, and Multi-Agent Reinforcement Learning.</p>
-                    
-                    <div class="funding-info">
-                        <p>Mario Chacón-Falcón is currently funded by the European Commission – NextGenerationEU, through Momentum CSIC Programme: "Develop Your Digital Talent"</p>
-                        <img src="images/Logo-Momentum-Negativo_Circular.png" alt="Momentum CSIC Programme" class="funding-logo">
-                    </div>
-                    
-                    <h3>Education</h3>
-                    <ul class="education-list">
-                        <li>
-                            <span class="degree">Ph.D. in Mathematics</span>
-                            <span>Instituto de Ciencias Matemáticas (ICMAT) - Universidad Autónoma de Madrid (UAM)</span>
-                            <span>2024 - Present</span>
-                        </li>
-                        <li>
-                            <span class="degree">M.S. in Logic, Computation and Artificial Intelligence</span>
-                            <span>Universidad de Sevilla (US)</span>
-                            <span>2023 - 2024</span>
-                        </li>
-                        <li>
-                            <span class="degree">B.S. in Mathematics</span>
-                            <span>Universidad de Sevilla (US)</span>
-                            <span>2019 - 2023</span>
-                        </li>
-                    </ul>
 
-                    <h3>Research Interests</h3>
-                    <ul class="interests-list">
-                        <li>Bayesian Methods</li>
-                        <li>Decision Making</li>
-                        <li>Reinforcement Learning</li>
-                        <li>Federated Learning</li>
-                        <li>Multi-Agent Systems</li>
-                    </ul>
+<body data-page="home">
+    <main id="content" class="wrap">
 
-                    <h3>Recent Updates</h3>
-                    <div class="recent-updates">
-                        <div class="updates-grid">
-                            <div class="update-card">
-                                <div class="update-content">
-                                    <div class="update-meta">
-                                        <span class="badge badge-paper"><i class="fas fa-file-alt"></i> New Paper</span>
-                                        <span class="update-date">2026</span>
-                                    </div>
-                                    <h4>Privacy-preserving federated learning AdaBoost via knowledge distillation</h4>
-                                    <p>Our research combining AdaBoost, Knowledge Distillation, and Federated Learning for robust, privacy-preserving distributed learning has been published in <em>Knowledge-Based Systems</em>!</p>
-                                    <a href="publications.html" class="update-link">View Publication <i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="update-card">
-                                <div class="update-content">
-                                    <div class="update-meta">
-                                        <span class="badge badge-talk"><i class="fas fa-microphone"></i> Oral Presentation</span>
-                                        <span class="update-date">April 2026</span>
-                                    </div>
-                                    <h4>COML 2026 (InterCoML) &mdash; Prague</h4>
-                                    <p>Oral presentation on <em>Opponent-Aware Soft Q-Learning</em> and served as discussant in Roundtable I on <em>Adversarial, Risk-Aware Decision Making in Multi-Agent Systems</em> at COST Action CA24136.</p>
-                                    <a href="conferences.html" class="update-link">See Details <i class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-
-                            <div class="update-card">
-                                 <div class="update-content">
-                                     <div class="update-meta">
-                                         <span class="badge badge-group"><i class="fas fa-users"></i> Reading Group</span>
-                                         <span class="update-date">2026</span>
-                                     </div>
-                                     <h4>RL & Multi-Agent RL Reading Group</h4>
-                                     <p>Co-organizing a reading group focused on Reinforcement Learning, MARL, and sequential decision-making following Murphy's <em>Reinforcement Learning: An Overview</em>.</p>
-                                     <div class="card-inline-links">
-                                         <a href="https://rl-readinggroup.github.io/" target="_blank" class="update-link">Website <i class="fas fa-external-link-alt"></i></a>
-                                         <a href="conferences.html#reading-groups" class="update-link">Details <i class="fas fa-arrow-right"></i></a>
-                                     </div>
-                                 </div>
-                            </div>
-
-                            <div class="update-card">
-                                <div class="update-image">
-                                    <img src="images/recent/BAMSLDKOverview.jpg" alt="BAM-SLDK Architecture">
-                                </div>
-                                <div class="update-content">
-                                    <div class="update-meta">
-                                        <span class="badge badge-paper"><i class="fas fa-file-alt"></i> Paper</span>
-                                        <span class="update-date">2025</span>
-                                    </div>
-                                    <h4>BAM-SLDK in IOP Neuromorphic Computing & Engineering</h4>
-                                    <p>Our paper introducing biologically inspired attention mechanisms with spiking learnable delayed kernel synapses is published in <em>IOP NCE</em>.</p>
-                                    <div class="card-inline-links">
-                                        <a href="BAMSLDKVisual.html" class="update-link">Visual Demo <i class="fas fa-arrow-right"></i></a>
-                                        <a href="publications.html" class="update-link">Publications <i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 Mario Chacón-Falcón. Last updated: October 2026</p>
-            <div class="footer-funding">
-                <p>Funded by the European Commission – NextGenerationEU, through Momentum CSIC Programme</p>
-                <img src="images/Logo-Momentum-Negativo_Circular.png" alt="Momentum CSIC Programme" class="footer-logo">
+        <!-- ============ Intro ============ -->
+        <section class="hero">
+            <div class="hero-photo">
+                <img src="images/profile-2026.jpg" alt="Portrait of Mario Chacón-Falcón" width="220" height="220">
             </div>
-        </div>
-    </footer>
+            <div>
+                <h1>Mario Chacón-Falcón</h1>
+                <p class="role">
+                    PhD candidate in Mathematics &middot;
+                    <a href="https://www.icmat.es/" target="_blank" rel="noopener">ICMAT-CSIC</a> &amp;
+                    <a href="https://www.uam.es/" target="_blank" rel="noopener">Universidad Autónoma de Madrid</a>
+                </p>
+                <div class="bio">
+                    <p>
+                        I study how learning agents can make good decisions when the world, and the
+                        other agents in it, are uncertain and changing. My research sits between
+                        <strong>reinforcement learning</strong> and <strong>Bayesian decision theory</strong>:
+                        adaptive agents that infer latent goals and shifting dynamics, multi-agent RL with
+                        explicit beliefs about opponents, and adversarial risk analysis for sequential
+                        strategic problems.
+                    </p>
+                    <p>
+                        My PhD is funded by the Momentum CSIC programme.
+                        Before my PhD I completed an M.S. in Logic, Computation and AI and a B.S. in
+                        Mathematics at the Universidad de Sevilla, and worked on spiking neural networks at
+                        IMSE-CNM.
+                    </p>
+                </div>
+                <div class="links-row">
+                    <a class="chip-link primary" href="mailto:mario.chacon@icmat.es"><i
+                            class="fa-solid fa-envelope"></i> mario.chacon@icmat.es</a>
+                    <a class="chip-link" href="https://scholar.google.es/citations?user=s39KvDoAAAAJ&amp;hl=en"
+                        target="_blank" rel="noopener"><i class="ai ai-google-scholar"></i> Scholar</a>
+                    <a class="chip-link" href="https://github.com/mchacon28" target="_blank" rel="noopener"><i
+                            class="fa-brands fa-github"></i> GitHub</a>
+                    <a class="chip-link" href="https://orcid.org/0009-0004-5938-0551" target="_blank" rel="noopener"><i
+                            class="ai ai-orcid"></i> ORCID</a>
+                    <a class="chip-link" href="https://www.linkedin.com/in/mario-chacon-falcon518831318/"
+                        target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a class="chip-link" href="cv.html"><i class="fa-solid fa-file-lines"></i> CV</a>
+                </div>
+            </div>
+        </section>
 
-    <!-- Modal para solicitar CV -->
-    <div id="cv-modal" class="cv-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 class="modal-title">Request CV</h3>
-            <form id="cv-request-form" class="cv-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message (optional)</label>
-                    <textarea id="message" name="message" rows="4"></textarea>
-                </div>
-                <button type="submit" class="form-submit">Send Request</button>
-            </form>
-        </div>
-    </div>
+        <!-- ============ Research themes ============ -->
+        <section class="section">
+            <div class="section-title">
+                <h2>Research interests</h2>
+            </div>
+            <div class="themes">
+                <article class="theme">
+                    <h3><span class="glyph"><i class="fa-solid fa-arrows-rotate"></i></span> Adaptive RL</h3>
+                    <p>Agents that track latent goals and non-stationary dynamics, and adapt their policy as their
+                        beliefs about the task change.</p>
+                </article>
+                <article class="theme">
+                    <h3><span class="glyph"><i class="fa-solid fa-chess-knight"></i></span> Multi-agent RL</h3>
+                    <p>Learning against and alongside other strategic agents: opponent modelling, robustness to
+                        exploitation.</p>
+                </article>
+                <article class="theme">
+                    <h3><span class="glyph"><i class="fa-solid fa-chart-area"></i></span> Bayesian decision making</h3>
+                    <p>Adversarial risk analysis: designing agents with principled beliefs about opponents.</p>
+                </article>
+                <article class="theme">
+                    <h3><span class="glyph"><i class="fa-solid fa-shield-halved"></i></span> Robust &amp; secure
+                        learning</h3>
+                    <p>Robust policies for high-stakes settings and privacy-preserving distributed learning.</p>
+                </article>
+            </div>
+        </section>
 
-    <script src="js/sidebar.js"></script>
-    <script src="js/cv-request.js"></script>
+        <!-- ============ News ============ -->
+        <section class="section">
+            <div class="section-title">
+                <h2>News</h2>
+                <a href="talks.html">All talks &rarr;</a>
+            </div>
+            <ul class="news">
+                <li>
+                    <time datetime="2026-11">Nov 2026</time>
+                    <p><span class="kind">Paper</span><a href="https://arxiv.org/abs/2611.14289" target="_blank"
+                            rel="noopener"><em>Adversarial risk analysis with fully probabilistic designs</em></a>, with
+                        T. V. Guy, M. Kárný and D. Ríos Insua, is on arXiv; the journal version is in production.</p>
+                </li>
+                <li>
+                    <time datetime="2026-10">Oct 2026</time>
+                    <p><span class="kind">Workshop</span>Attended <em>Rethinking the Role of Bayesianism in the Age of
+                            Modern AI</em> in Edinburgh.</p>
+                </li>
+                <li>
+                    <time datetime="2026">2026</time>
+                    <p><span class="kind">Paper</span><a href="publications.html#kbs2026"><em>Privacy-preserving
+                                federated learning AdaBoost via knowledge distillation</em></a> is out in
+                        <em>Knowledge-Based Systems</em>.</p>
+                </li>
+                <li>
+                    <time datetime="2026-06">Jun 2026</time>
+                    <p><span class="kind">Talk</span><em>Tracking latent goals for robust reinforcement learning</em> at
+                        the II International Workshop on Bayesian Statistics (SEIO), CUNEF Madrid.</p>
+                </li>
+                <li>
+                    <time datetime="2026-04">Apr 2026</time>
+                    <p><span class="kind">Talk</span><em>Opponent-aware soft Q-learning</em> at COML 2026 (COST Action
+                        CA24136), Prague &mdash; plus a roundtable on adversarial, risk-aware decision making in
+                        multi-agent systems.</p>
+                </li>
+                <li>
+                    <time datetime="2026-04">Apr 2026</time>
+                    <p><span class="kind">Teaching</span>Taught <em>Introduction to Bayesian Statistics</em> at the
+                        Spanish National Statistics Institute (INE) school.</p>
+                </li>
+                <li>
+                    <time datetime="2026">2026</time>
+                    <p><span class="kind">Community</span>Co-organizing the <a href="https://rl-readinggroup.github.io/"
+                            target="_blank" rel="noopener">RL &amp; MARL reading group</a>.</p>
+                </li>
+                <li>
+                    <time datetime="2025-11">Nov 2025</time>
+                    <p><span class="kind">Invited</span>Seminar at UTIA, Czech Academy of Sciences: <em>Towards secure
+                            AI: private distributed learning and strategic decision making</em>.</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ============ Selected publications ============ -->
+        <section class="section">
+            <div class="section-title">
+                <h2>Selected publications</h2>
+                <a href="publications.html">All publications &rarr;</a>
+            </div>
+
+            <article class="pub">
+                <div class="year">2026</div>
+                <div>
+                    <h3 class="pub-title"><a href="publications.html#ara-fpd">Adversarial risk analysis with fully
+                            probabilistic designs</a> <span class="status accepted">In press</span></h3>
+                    <p class="pub-authors"><span class="me">M. Chacón-Falcón</span>, T. V. Guy, M. Kárný, D. Ríos Insua
+                    </p>
+                    <p class="pub-venue"><em>Reliability Engineering &amp; System Safety</em> &middot; <a
+                            href="https://arxiv.org/abs/2611.14289" target="_blank" rel="noopener">arXiv:2611.14289</a>
+                    </p>
+                    <p class="pub-tldr">Uses fully probabilistic design to model and forecast an opponent's decisions
+                        within adversarial risk analysis, for single- and multi-stage security games.</p>
+                </div>
+            </article>
+
+            <article class="pub">
+                <div class="year">2026</div>
+                <div>
+                    <h3 class="pub-title"><a href="publications.html#kbs2026">Privacy-preserving federated learning
+                            AdaBoost via knowledge distillation</a></h3>
+                    <p class="pub-authors"><span class="me">M. Chacón-Falcón</span>, J. M. Moyano</p>
+                    <p class="pub-venue"><em>Knowledge-Based Systems</em>, 339, 2026</p>
+                </div>
+            </article>
+
+            <article class="pub">
+                <div class="year">2025</div>
+                <div>
+                    <h3 class="pub-title"><a href="publications.html#nce2025">BAM-SLDK: Biologically inspired attention
+                            mechanism with spiking learnable delayed kernel synapses</a></h3>
+                    <p class="pub-authors"><span class="me">M. Chacón-Falcón</span>, A. Patiño-Saucedo, L. Camuñas-Mesa,
+                        T. Serrano-Gotarredona, B. Linares-Barranco</p>
+                    <p class="pub-venue"><em>Neuromorphic Computing and Engineering</em>, 5(1), 2025</p>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <script src="assets/js/site.js"></script>
 </body>
-</html> 
+
+</html>

@@ -3,67 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - Academic Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Publications · Mario Chacón-Falcón</title>
+    <meta name="description" content="Publications and preprints by Mario Chacón-Falcón on reinforcement learning, adversarial risk analysis, federated learning and spiking neural networks.">
+    <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
 </head>
-<body>
-    <div class="layout-container">
-        <!-- Main content -->
-        <main class="main-content">
-            <section id="publications" class="content-section">
-                <h2 class="section-title">Publications</h2>
-                <div class="section-content">
-                    <div class="publication-item">
-                        <div class="pub-header">
-                            <span class="pub-badge">Journal Article</span>
-                            <span class="pub-year">2026</span>
-                        </div>
-                        <h3 class="pub-title">Privacy-preserving federated learning AdaBoost via knowledge distillation</h3>
-                        <p class="pub-authors"><strong>Mario Chacón-Falcón</strong>, Jose M. Moyano</p>
-                        <p class="pub-journal"><em>Knowledge-Based Systems</em>, Vol. 339, Article 116962, 2026</p>
-                        <p class="pub-abstract">Federated Learning (FL) provides a decentralized machine learning paradigm allowing multiple clients to collaboratively train models without sharing raw data. However, data heterogeneity across clients and privacy risks during model exchanges remain critical challenges. In this paper, we propose a novel privacy-preserving adaptation of AdaBoost for Federated Learning that leverages knowledge distillation to effectively mitigate non-IID data skew while preventing sensitive information leakage during aggregation, enhancing both model accuracy and robust privacy guarantees.</p>
-                        <div class="pub-links">
-                            <a href="https://github.com/mchacon28/AdaBoost-FDK" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://personal.us.es/jmoyano1/supp/Cha26" target="_blank" class="pub-link"><i class="fas fa-paperclip"></i> Supplementary</a>
-                            <a href="https://www.sciencedirect.com/science/article/pii/S0950705126016886" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=s39KvDoAAAAJ&citation_for_view=s39KvDoAAAAJ:9yKSN-GCB0IC" target="_blank" class="pub-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
-                        </div>
-                    </div>
+<body data-page="publications">
+<main id="content" class="wrap">
 
-                    <div class="publication-item">
-                        <div class="pub-header">
-                            <span class="pub-badge">Journal Article</span>
-                            <span class="pub-year">2025</span>
+    <header class="page-head">
+        <h1>Publications</h1>
+        <p class="lede">
+            Journal articles and preprints. For an up-to-date list with citations see
+            <a href="https://scholar.google.es/citations?user=s39KvDoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+        </p>
+    </header>
+
+    <!-- ================= Journal articles ================= -->
+    <section class="pub-group section">
+        <h2>Journal articles</h2>
+
+        <article class="pub" id="ara-fpd">
+            <div class="year">2026</div>
+            <div>
+                <h3 class="pub-title">Adversarial risk analysis with fully probabilistic designs <span class="status accepted">In press</span></h3>
+                <p class="pub-authors"><span class="me">Mario Chacón-Falcón</span>, Tatiana Valentine Guy, Miroslav Kárný, David Ríos Insua</p>
+                <p class="pub-venue"><em>Reliability Engineering &amp; System Safety</em> (journal version in production) &middot; preprint arXiv:2611.14289</p>
+                <div class="pub-actions inline-details">
+                    <a class="btn-sm" href="https://arxiv.org/abs/2611.14289" target="_blank" rel="noopener"><i class="ai ai-arxiv"></i> arXiv</a>
+                    <a class="btn-sm" href="https://arxiv.org/pdf/2611.14289" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> PDF</a>
+                    <details class="more">
+                        <summary>Abstract</summary>
+                        <div class="more-body">
+                            Adversarial Risk Analysis (ARA) supports decision makers facing intelligent opponents and uncertain
+                            outcomes by modelling the opponents' preferences, capabilities, beliefs and strategic reasoning,
+                            but it entails complex modelling and computations. We combine ARA with Fully Probabilistic Design
+                            (FPD), a control-theoretic approach that selects the decision distribution whose induced outcome
+                            distribution is closest, in Kullback&ndash;Leibler divergence, to an ideal one, and use it to model and
+                            forecast the opponent's decisions. We show how to handle single- and multi-stage security games
+                            within this ARA&ndash;FPD framework, with applications to the reliability and risk analysis of
+                            critical infrastructure.
                         </div>
-                        <h3 class="pub-title">BAM-SLDK: Biologically inspired Attention Mechanism with Spiking Learnable Delayed Kernel synapses</h3>
-                        <p class="pub-authors"><strong>Mario Chacón-Falcón</strong>, Alberto Patiño-Saucedo, Luis Camuñas-Mesa, Teresa Serrano-Gotarredona, Bernabé Linares-Barranco</p>
-                        <p class="pub-journal"><em>IOP Neuromorphic Computing and Engineering</em>, Vol. 5, No. 1, 2025</p>
-                        <p class="pub-abstract">Spiking Neural Networks (SNNs) are emerging as an alternative neural network model due to their biological plausibility, energy efficiency, and built-in ability to learn from temporal dynamics. However, in order to effectively process data with rich spatial and temporal dependencies, the usual static projections (feedforward and recurrent) among layers of spiking neurons fail to represent all the information needed. Inspired by how synaptic delays affect the learning process in biological neurons, in this paper, we propose a biologically inspired attention mechanism based on spiking convolutions with learnable delayed kernel synapses. The proposed model increases temporal learning ability, attending simultaneously to spatial and temporal dynamics with few parameters required.</p>
-                        <div class="pub-links">
-                            <a href="BAMSLDKVisual.html" class="pub-link"><i class="fas fa-desktop"></i> Visual Demo</a>
-                            <a href="https://github.com/mchacon28/DelayedConv" target="_blank" class="pub-link"><i class="fab fa-github"></i> Code</a>
-                            <a href="https://doi.org/10.1088/2634-4386/addb6c" target="_blank" class="pub-link"><i class="fas fa-link"></i> DOI</a>
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=s39KvDoAAAAJ&citation_for_view=s39KvDoAAAAJ:u-x6o8ySG0sC" target="_blank" class="pub-link"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    </details>
+                    <details class="more">
+                        <summary>BibTeX</summary>
+                        <div class="more-body">
+<pre class="bibtex" id="bib-arafpd">@misc{chaconfalcon2026arafpd,
+  title         = {Adversarial risk analysis with fully probabilistic designs},
+  author        = {Chac{\'o}n-Falc{\'o}n, Mario and Guy, Tatiana Valentine and K{\'a}rn{\'y}, Miroslav and R{\'i}os Insua, David},
+  year          = {2026},
+  eprint        = {2611.14289},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.GT},
+  doi           = {10.48550/arXiv.2611.14289}
+}</pre>
+                            <div class="copy-row"><button class="btn-sm" type="button" data-copy="bib-arafpd" data-toast="BibTeX copied"><i class="fa-regular fa-copy"></i> Copy</button></div>
                         </div>
-                    </div>
+                    </details>
                 </div>
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <p>&copy; 2026 Mario Chacón-Falcón. Last updated: October 2026</p>
-            <div class="footer-funding">
-                <p>Funded by the European Commission – NextGenerationEU, through Momentum CSIC Programme</p>
-                <img src="images/Logo-Momentum-Negativo_Circular.png" alt="Momentum CSIC Programme" class="footer-logo">
             </div>
-        </div>
-    </footer>
+        </article>
+        <article class="pub" id="kbs2026">
+            <div class="year">2026</div>
+            <div>
+                <h3 class="pub-title">Privacy-preserving federated learning AdaBoost via knowledge distillation</h3>
+                <p class="pub-authors"><span class="me">Mario Chacón-Falcón</span>, Jose M. Moyano</p>
+                <p class="pub-venue"><em>Knowledge-Based Systems</em>, vol. 339, article 116962, 2026</p>
+                <div class="pub-actions inline-details">
+                    <a class="btn-sm" href="https://www.sciencedirect.com/science/article/pii/S0950705126016886" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Paper</a>
+                    <a class="btn-sm" href="https://github.com/mchacon28/AdaBoost-FDK" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                    <a class="btn-sm" href="https://personal.us.es/jmoyano1/supp/Cha26" target="_blank" rel="noopener"><i class="fa-solid fa-paperclip"></i> Supplementary</a>
+                    <details class="more">
+                        <summary>Abstract</summary>
+                        <div class="more-body">
+                            Federated Learning (FL) provides a decentralized machine learning paradigm allowing multiple clients
+                            to collaboratively train models without sharing raw data. However, data heterogeneity across clients
+                            and privacy risks during model exchanges remain critical challenges. In this paper, we propose a novel
+                            privacy-preserving adaptation of AdaBoost for Federated Learning that leverages knowledge distillation
+                            to effectively mitigate non-IID data skew while preventing sensitive information leakage during
+                            aggregation, enhancing both model accuracy and privacy guarantees.
+                        </div>
+                    </details>
+                    <details class="more">
+                        <summary>BibTeX</summary>
+                        <div class="more-body">
+<pre class="bibtex" id="bib-kbs2026">@article{chaconfalcon2026privacy,
+  title   = {Privacy-preserving federated learning {AdaBoost} via knowledge distillation},
+  author  = {Chac{\'o}n-Falc{\'o}n, Mario and Moyano, Jose M.},
+  journal = {Knowledge-Based Systems},
+  volume  = {339},
+  pages   = {116962},
+  year    = {2026},
+  doi     = {10.1016/j.knosys.2026.116962}
+}</pre>
+                            <div class="copy-row"><button class="btn-sm" type="button" data-copy="bib-kbs2026" data-toast="BibTeX copied"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </article>
 
-    <script src="js/sidebar.js"></script>
+        <article class="pub" id="nce2025">
+            <div class="year">2025</div>
+            <div>
+                <h3 class="pub-title">BAM-SLDK: Biologically inspired attention mechanism with spiking learnable delayed kernel synapses</h3>
+                <p class="pub-authors"><span class="me">Mario Chacón-Falcón</span>, Alberto Patiño-Saucedo, Luis Camuñas-Mesa, Teresa Serrano-Gotarredona, Bernabé Linares-Barranco</p>
+                <p class="pub-venue"><em>Neuromorphic Computing and Engineering</em> (IOP), vol. 5, no. 1, 2025</p>
+                <div class="pub-actions inline-details">
+                    <a class="btn-sm" href="https://doi.org/10.1088/2634-4386/addb6c" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Paper</a>
+                    <a class="btn-sm" href="https://github.com/mchacon28/DelayedConv" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a>
+                    <a class="btn-sm" href="BAMSLDKVisual.html"><i class="fa-solid fa-film"></i> Visual demo</a>
+                    <details class="more">
+                        <summary>Abstract</summary>
+                        <div class="more-body">
+                            Spiking Neural Networks (SNNs) are emerging as an alternative neural network model due to their
+                            biological plausibility, energy efficiency, and built-in ability to learn from temporal dynamics.
+                            However, in order to effectively process data with rich spatial and temporal dependencies, the usual
+                            static projections (feedforward and recurrent) among layers of spiking neurons fail to represent all
+                            the information needed. Inspired by how synaptic delays affect the learning process in biological
+                            neurons, we propose a biologically inspired attention mechanism based on spiking convolutions with
+                            learnable delayed kernel synapses. The proposed model increases temporal learning ability, attending
+                            simultaneously to spatial and temporal dynamics with few parameters required.
+                        </div>
+                    </details>
+                    <details class="more">
+                        <summary>BibTeX</summary>
+                        <div class="more-body">
+<pre class="bibtex" id="bib-nce2025">@article{chaconfalcon2025bamsldk,
+  title   = {{BAM-SLDK}: Biologically inspired attention mechanism with spiking learnable delayed kernel synapses},
+  author  = {Chac{\'o}n-Falc{\'o}n, Mario and Pati{\~n}o-Saucedo, Alberto and Camu{\~n}as-Mesa, Luis and Serrano-Gotarredona, Teresa and Linares-Barranco, Bernab{\'e}},
+  journal = {Neuromorphic Computing and Engineering},
+  volume  = {5},
+  number  = {1},
+  year    = {2025},
+  doi     = {10.1088/2634-4386/addb6c}
+}</pre>
+                            <div class="copy-row"><button class="btn-sm" type="button" data-copy="bib-nce2025" data-toast="BibTeX copied"><i class="fa-regular fa-copy"></i> Copy</button></div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+</main>
+<script src="assets/js/site.js"></script>
 </body>
-</html> 
+</html>
